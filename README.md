@@ -30,7 +30,7 @@ Needs node.js version >= 4.0.0.
   
 #### For now, run node with the --harmony_destructuring flag as it isn't finally implemented. 
   
-  1. Copy the `.env.example` file to `.env` and fill in your credentials. You don't need to specify a database for now. 
+  1. Copy (or create a new one) the `.env.example` file to `.env` in your apps root dir and fill in your credentials. You don't need to specify a database here. 
   2. Start redis and run `npm run-script createModel`, follow the instructions. 
   3. Have a look at the generated file inside the `/models` directory, you can add valueOptions, defaultValues and whatsoever
   4. Once done, saving XML data is as simple as:
