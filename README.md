@@ -18,7 +18,9 @@ For the sake of this example, it creates this `INSERT ... ON DUPLICATE KEY UPDAT
 
     INSERT INTO exampleModel (`col1`,`col2`,`created_at`,`updated_at`) VALUES ('hello','test','2015-09-22T16:48:41.355Z','2015-09-22T16:48:41.355Z'),('hello','test2','2015-09-22T16:48:41.355Z','2015-09-22T16:48:41.355Z'),('hello','test3','2015-09-22T16:48:41.355Z','2015-09-22T16:48:41.355Z') ON DUPLICATE KEY UPDATE `col1`=VALUES(`col1`),`col2`=VALUES(`col2`),`updated_at`=VALUES(`updated_at`)
 
-and executes the query, given the `exampleModel` found in the models directory. 
+and executes the query, given this `exampleModel` found in the models directory:
+ 
+ 
 
 ## Important
 
@@ -58,18 +60,6 @@ The XML parser uses dotNotation to access the xml nodes. A convenient way to get
       parser.parseFile("./examples/example.xml", {toDotNotation:true})
           .then(val => console.log(val));
 
-
-As a example, if you add the following to your `_BaseModel`'s functions `Map`, you'll get the same as when running an `INSERT ... ON DUPLICATE KEY UPDATE` query, but for `LOAD DATA LOCAL INFILE`:
-
-                [
-                    'csvImportProducts', (data) => Promise.all([
-                    this.loadDataInfileString(data.file, 'temp_' + data.table, data.cs, data.ss, data.options),
-                    'COMMIT;START TRANSACTION',
-                    this.copyTableData('temp_' + data.table, data.table, new Map([['tmpTableColumnName', 'destinationColumnName']])),
-                    'SAVEPOINT sp2',
-                    this.rm(data.table, new Map([['where', new Map([['tmpTableColumnName', '']])]])),
-                    this.rmCompareNotIn(data.table, 'temp_' + data.table, new Map([['tmpTableColumnName', 'destinationColumnName']]))
-                ])
 
 I'll add some examples and easier usage later, feel free to ask on stackoverflow.com or post your issues here. 
 

@@ -35,23 +35,14 @@ var exampleModel = (function (_BaseModel2) {
         // this.needTemporaryTable = false;
         this.columns = {
             col1: {
-                find: "xml.group"
-                //exclude: null,
-                // defaultValue: false,
-                // valueOptions: {
-                //    replace: {},
-                //    regex: {}
-                // }
+                find: "xml.group",
+                valueOptions: {
+                    replace: { showReplace: 'Hello' }
+                }
             },
 
             col2: {
                 find: "xml.tag"
-                //exclude: null,
-                // defaultValue: false,
-                // valueOptions: {
-                //    replace: {},
-                //    regex: {}
-                // }
             },
 
             created_at: {
