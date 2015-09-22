@@ -42,7 +42,6 @@ Needs node.js version >= 4.0.0.
       const XmlParser = _Parser.xml;
       const CsvParser = _Parser.csv;
       let parser = new XmlParser({database: 'databaseToUse'});
-      let parser = new XmlParser({database: 'databaseToUse'});
       parser.parseFile("./examples/example.xml", ['exampleModel']);
 
 Saving CSV data is quite similar:       
