@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "xml2model": "XmlParser.js",
-    "csv2model": "Csv2Model.es6",
-    "CreateModel": "CreateModel.js"
+    "xml2model": "bin/XmlParser.js",
+    "csv2model": "bin/Csv2Model.es6",
+    "CreateModel": "bin/CreateModel.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
