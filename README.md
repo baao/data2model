@@ -38,7 +38,7 @@ Needs node.js version >= 4.0.0.
 `2`
 
       'use strict';
-      const _Parser = require('./../index');
+      const _Parser = require('data2model');
       const XmlParser = _Parser.xml;
       const CsvParser = _Parser.csv;
       let parser = new XmlParser({database: 'databaseToUse'});
