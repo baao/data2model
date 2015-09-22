@@ -7,5 +7,6 @@
 'use strict';
 module.exports = {
     xml: require('./bin/XmlParser.js'),
-    csv: require('./bin/Csv2Model.es6')
+    csv: require('./bin/Csv2Model.es6'),
+    creator: require('./bin/CreateModel.js')
 };
