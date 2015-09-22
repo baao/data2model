@@ -24,6 +24,7 @@ and executes the query, given the `exampleModel` found in the models directory.
 
 #### Very new package, so there might be some bugs and issues. 
 Feel free to contribute or to post any issues. 
+There are a couple of things to work on... 
 Needs node.js version >= 4.0.0.
 
 ## Usage
