@@ -32,6 +32,8 @@ Needs node.js version >= 4.0.0.
   4. Once done, saving XML data is as simple as:
 
 
+
+
       'use strict';
       const XmlParser = require('data2model').xml;
       let parser = new XmlParser({database: 'databaseToUse'});
