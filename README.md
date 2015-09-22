@@ -8,6 +8,10 @@ Models are created by running `npm run-script createModel`. The model creator re
 but currently only saves your databases. Redis uses database 10 by default and for now only creates an entry called
 `modelCreator_database`. 
 
+## Installation
+
+    npm i data2model --save
+
 ## What it does
 
 For the sake of this example, it creates this `INSERT ... ON DUPLICATE KEY UPDATE` query:
