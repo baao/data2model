@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "xml2model": "xml2model.js",
+    "xml2model": "XmlParser.js",
     "csv2model": "Csv2Model.es6",
     "CreateModel": "CreateModel.js"
   },
