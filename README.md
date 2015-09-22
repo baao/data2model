@@ -68,7 +68,7 @@ As a example, if you add the following to your `_BaseModel`'s functions `Map`, y
                     this.rmCompareNotIn(data.table, 'temp_' + data.table, new Map([['tmpTableColumnName', 'destinationColumnName']]))
                 ])
 
-I'll add some examples and easier usage later, feel free to ask on stackoverflow.com using the `data2model` tag or post your issues here. 
+I'll add some examples and easier usage later, feel free to ask on stackoverflow.com or post your issues here. 
 
 ## Examples
 
