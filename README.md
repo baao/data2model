@@ -2,7 +2,7 @@
 Saves XML and CSV data to a database - based on models
 
 This packages aims on providing a high performance, fast and convenient way to save data obtained via XML or CSV files. 
-It uses `LOAD DATA LOCAL INFILE` for CSV files and parses XML data according to your models. Everything is created for you.
+It uses `LOAD DATA LOCAL INFILE` for CSV files and parses XML (using [sax-js](https://github.com/isaacs/sax-js))data according to your models. Everything is created for you.
  
 You can create models with the model creator. The model creator requires redis for convenience, 
 but currently only saves your databases. Redis uses database 10 by default and for now only creates an entry called
