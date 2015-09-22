@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/baao/xml2model.git"
+    "url": "https://github.com/baao/data2model.git"
   },
   "author": "Michael",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baao/xml2model/issues"
+    "url": "https://github.com/baao/data2model/issues"
   },
-  "homepage": "https://github.com/baao/xml2model",
+  "homepage": "https://github.com/baao/data2model",
   "dependencies": {
     "app-root-path": "^1.0.0",
     "bluebird": "^2.9.34",
