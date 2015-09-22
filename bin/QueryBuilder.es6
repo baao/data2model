@@ -65,8 +65,6 @@ class Connection {
     }
 
     query(query) {
-        log(query);
-
         return this.getConnection().then(con => {
             return con.queryAsync(query).spread((res, table) => {
                 con.release();
@@ -104,7 +102,7 @@ class Connection {
                             });
                         });
                         con.release();
-                    }).catch(err => log(err));
+                    }).catch(err => (err));
                 } else {
                     commiter(con);
                 }
@@ -113,7 +111,7 @@ class Connection {
                     throw new QueryError(err);
                 });
             });
-        }).catch(err => log(err));
+        }).catch(err => (err));
     }
 
     shouldQueryNow(query) {
@@ -269,8 +267,6 @@ class Connection {
 
     compareTableCount(table1, table2) {
         return this.query(mysql.format('SELECT COUNT(a.id) as counter FROM ?? as a UNION ALL SELECT COUNT(b.id) as counter FROM ?? as b', [table1, table2])).spread((table1, table2) => {
-            log(table1.counter * 2 >= table2.counter);
-            log(table1.counter);
             return table1.counter * 2 >= table2.counter;
         });
     }
@@ -328,9 +324,7 @@ class Connection {
             });
             stmt = stmt.replace(/,$/, ') ' + options.compare + ' ?? ' + options.inOrNot + ' (');
         }
-        log(stmt);
         stmt = stmt.replace(/ (AND|IN) \?\? (IN|NOT IN) \($/ig, '');
-        log(stmt);
         return [stmt, arr]
     }
 

@@ -106,8 +106,6 @@ var Connection = (function () {
     }, {
         key: 'query',
         value: function query(_query) {
-            log(_query);
-
             return this.getConnection().then(function (con) {
                 return con.queryAsync(_query).spread(function (res, table) {
                     con.release();
@@ -147,7 +145,7 @@ var Connection = (function () {
                             });
                             con.release();
                         })['catch'](function (err) {
-                            return log(err);
+                            return err;
                         });
                     } else {
                         commiter(con);
@@ -158,7 +156,7 @@ var Connection = (function () {
                     });
                 });
             })['catch'](function (err) {
-                return log(err);
+                return err;
             });
         }
     }, {
@@ -482,8 +480,6 @@ var Connection = (function () {
         key: 'compareTableCount',
         value: function compareTableCount(table1, table2) {
             return this.query(_mysql2['default'].format('SELECT COUNT(a.id) as counter FROM ?? as a UNION ALL SELECT COUNT(b.id) as counter FROM ?? as b', [table1, table2])).spread(function (table1, table2) {
-                log(table1.counter * 2 >= table2.counter);
-                log(table1.counter);
                 return table1.counter * 2 >= table2.counter;
             });
         }
@@ -614,9 +610,7 @@ var Connection = (function () {
                 }
             }
 
-            log(stmt);
             stmt = stmt.replace(/ (AND|IN) \?\? (IN|NOT IN) \($/ig, '');
-            log(stmt);
             return [stmt, arr];
         }
     }, {

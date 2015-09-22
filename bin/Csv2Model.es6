@@ -151,10 +151,10 @@ class Csv2Model {
                 ss: ss
             }));
         })
-            .catch(NotFoundError, err => log(err))
-            .catch(ModelNotFoundError, err => log(err))
-            .catch(NoInputFile, err => log(err))
-            .catch(Error, err => log(err))
+            .catch(NotFoundError, err => (err))
+            .catch(ModelNotFoundError, err => (err))
+            .catch(NoInputFile, err => (err))
+            .catch(Error, err => (err))
     }
 
     runModelFunctions(options) {

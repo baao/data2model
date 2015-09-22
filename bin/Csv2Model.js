@@ -204,13 +204,13 @@ var Csv2Model = (function () {
                     ss: ss
                 }));
             })['catch'](NotFoundError, function (err) {
-                return log(err);
+                return err;
             })['catch'](ModelNotFoundError, function (err) {
-                return log(err);
+                return err;
             })['catch'](NoInputFile, function (err) {
-                return log(err);
+                return err;
             })['catch'](Error, function (err) {
-                return log(err);
+                return err;
             });
         }
     }, {
