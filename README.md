@@ -4,9 +4,9 @@ Saves XML and CSV data to a database - based on models
 This packages aims on providing a high performance, fast and convenient way to save data obtained via XML or CSV files. 
 It uses `LOAD DATA LOCAL INFILE` for CSV files and parses XML data according to your models. Everything is created for you.
  
-Models are created by running `npm run-script createModel`. The model creator requires redis for convenience, 
+You can create models with the model creator. The model creator requires redis for convenience, 
 but currently only saves your databases. Redis uses database 10 by default and for now only creates an entry called
-`modelCreator_database`. 
+`modelCreator_database` in redis.
 
 ## Installation
 
@@ -41,7 +41,7 @@ Needs node.js version >= 4.0.0.
   3. Have a look at the generated file inside the `/models` directory, you can add valueOptions, defaultValues and whatsoever
   4. Once done, saving XML data is as simple as:
 
-`2`
+`_`
 
       'use strict';
       const _Parser = require('data2model');
