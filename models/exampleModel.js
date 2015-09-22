@@ -27,17 +27,12 @@ var exampleModel = (function (_BaseModel2) {
         options = options || {};
         _get(Object.getPrototypeOf(exampleModel.prototype), "constructor", this).call(this, options);
         this.groupBy = ['col1'];
-        this.firstLine = [];
-        this.functionsBeforeParse = [];
         this.functionsAfterParse = ['saveData'];
-        this.checkFunctionAfterParse = '';
-        // this.savePoint = '';
-        // this.needTemporaryTable = false;
         this.columns = {
             col1: {
                 find: "xml.group",
                 valueOptions: {
-                    replace: { showReplace: 'Hello' }
+                    replace: { showReplace: 'hello' }
                 }
             },
 

@@ -18,9 +18,7 @@ For the sake of this example, it creates this `INSERT ... ON DUPLICATE KEY UPDAT
 
     INSERT INTO exampleModel (`col1`,`col2`,`created_at`,`updated_at`) VALUES ('hello','test','2015-09-22T16:48:41.355Z','2015-09-22T16:48:41.355Z'),('hello','test2','2015-09-22T16:48:41.355Z','2015-09-22T16:48:41.355Z'),('hello','test3','2015-09-22T16:48:41.355Z','2015-09-22T16:48:41.355Z') ON DUPLICATE KEY UPDATE `col1`=VALUES(`col1`),`col2`=VALUES(`col2`),`updated_at`=VALUES(`updated_at`)
 
-and executes the query, given this `exampleModel` found in the models directory:
- 
- 
+and executes the query, given the `exampleModel` found in the models directory.
 
 ## Important
 

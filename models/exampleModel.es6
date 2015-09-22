@@ -7,24 +7,17 @@
 
 "use strict";
 const _BaseModel = require("./_BaseModel.js");
-
-
 class exampleModel extends _BaseModel {
     constructor(options) {
         options = options || {};
         super(options);
         this.groupBy = ['col1'];
-        this.firstLine = [];
-        this.functionsBeforeParse = [];
         this.functionsAfterParse = ['saveData'];
-        this.checkFunctionAfterParse = '';
-        // this.savePoint = '';
-        // this.needTemporaryTable = false;
         this.columns = {
             col1 : {
                 find: "xml.group",
                 valueOptions: {
-                    replace: { showReplace: 'Hello' }
+                    replace: { showReplace: 'hello' }
                 }
             },
              
