@@ -31,7 +31,7 @@ Needs node.js version >= 4.0.0.
 #### For now, run node with the --harmony_destructuring flag as it isn't finally implemented. 
   
   1. Copy (or create a new one) the `.env.example` file to `.env` in your apps root dir and fill in your credentials. You don't need to specify a database here.
-  1.1. Get the dot notation for your xml file. See [dotNotation](https://github.com/baao/data2model#dotNotation) for how to.
+  1.1. Get the dot notation for your xml file. See [dotNotation](https://github.com/baao/data2model#dotnotation) for how to.
   2. Start redis, create a file with this contents:
   
   `var data2model = require('data2model');
